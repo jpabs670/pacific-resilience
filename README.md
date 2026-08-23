@@ -74,7 +74,7 @@ The current slice uses synthetic data and local SQLite only. It does not require
 
 This is an early engineering project and portfolio-grade reference implementation, not a production energy-management system. Interfaces may change while the first vertical slice is completed.
 
-The next milestones are a local ingest service, replayable outage demonstrations, operator-facing event timelines, and a documented recovery drill.
+The next milestones are a local ingest service, replayable outage demonstrations, operator-facing event timelines, and a documented recovery drill. See the [public roadmap](ROADMAP.md) and the first [offline gateway recovery drill](docs/operations/recovery-drill.md).
 
 ## Security and safety
 
