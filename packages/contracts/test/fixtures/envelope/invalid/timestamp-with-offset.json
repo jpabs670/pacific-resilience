@@ -1,0 +1,24 @@
+{
+  "intent": "A non-Z offset is rejected rather than normalized, so a wrong offset surfaces as an error instead of a silent shift.",
+  "expect": [
+    {
+      "path": "capturedAt",
+      "code": "time.not_utc"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000001",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "voltage.rms",
+    "capturedAt": "2026-07-26T14:15:30.250+10:00",
+    "sample": {
+      "kind": "numeric",
+      "value": 118.4,
+      "unit": "V"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

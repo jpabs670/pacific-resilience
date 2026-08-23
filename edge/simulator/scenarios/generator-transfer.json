@@ -1,0 +1,48 @@
+{
+  "name": "generator-transfer",
+  "description": "Utility fails, the building transfer switch runs the generator after a dead interval, then hands back to utility. Both transitions pass through 'none' because the ATS transfer type at Site 001 is unverified and must not be assumed to be closed-transition.",
+  "intervalMs": 1000,
+  "initialSocPct": 88,
+  "phases": [
+    {
+      "label": "utility-stable",
+      "durationMs": 90000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "utility-lost",
+      "durationMs": 12000,
+      "source": "none",
+      "voltage": { "mode": "dead" },
+      "served": "none",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "generator-running",
+      "durationMs": 180000,
+      "source": "generator",
+      "voltage": { "mode": "unstable" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "transfer-back-dead-interval",
+      "durationMs": 9000,
+      "source": "none",
+      "voltage": { "mode": "dead" },
+      "served": "none",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "utility-restored",
+      "durationMs": 90000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    }
+  ]
+}

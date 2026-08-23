@@ -1,0 +1,48 @@
+{
+  "name": "outage-restore",
+  "description": "Utility service sags, collapses to nothing for two minutes with all loads unserved, then returns. The canonical outage and restoration pair.",
+  "intervalMs": 1000,
+  "initialSocPct": 92,
+  "phases": [
+    {
+      "label": "utility-stable",
+      "durationMs": 120000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "sag-before-collapse",
+      "durationMs": 8000,
+      "source": "utility",
+      "voltage": { "mode": "sag", "fraction": 0.72 },
+      "served": "all",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "outage",
+      "durationMs": 120000,
+      "source": "none",
+      "voltage": { "mode": "dead" },
+      "served": "none",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "restored-unstable",
+      "durationMs": 15000,
+      "source": "utility",
+      "voltage": { "mode": "unstable" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    },
+    {
+      "label": "utility-stable-again",
+      "durationMs": 120000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    }
+  ]
+}

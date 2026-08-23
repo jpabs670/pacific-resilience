@@ -1,0 +1,24 @@
+{
+  "intent": "UUIDs are lowercase so one identifier has one wire form, keeping payload digests comparable. The reserved suffix ends in a hex letter so that uppercasing actually changes the string.",
+  "expect": [
+    {
+      "path": "readingId",
+      "code": "id.reading.invalid"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-00000000000A",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "voltage.rms",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 118.4,
+      "unit": "V"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

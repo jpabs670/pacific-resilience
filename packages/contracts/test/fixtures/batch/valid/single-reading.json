@@ -1,0 +1,27 @@
+{
+  "intent": "A one-reading batch, with a negative clock offset reported by the gateway.",
+  "value": {
+    "schemaVersion": 1,
+    "gatewayId": "gw_001_1",
+    "sequenceStart": 41204,
+    "sequenceEnd": 41204,
+    "clockOffsetMs": -1500,
+    "readings": [
+      {
+        "schemaVersion": 1,
+        "readingId": "00000000-0000-4000-8000-000000000001",
+        "siteId": "site_001",
+        "sourceId": "src_001_sim_panel",
+        "metric": "voltage.rms",
+        "capturedAt": "2026-07-26T04:15:30.250Z",
+        "sample": {
+          "kind": "numeric",
+          "value": 118.4,
+          "unit": "V"
+        },
+        "origins": ["simulated"],
+        "derivation": "direct"
+      }
+    ]
+  }
+}

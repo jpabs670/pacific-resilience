@@ -1,0 +1,71 @@
+{
+  "intent": "Gateway identifiers follow the documented format.",
+  "expect": [
+    {
+      "path": "gatewayId",
+      "code": "id.gateway.invalid"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "gatewayId": "gateway-1",
+    "sequenceStart": 41204,
+    "sequenceEnd": 41206,
+    "clockOffsetMs": 0,
+    "readings": [
+      {
+        "schemaVersion": 1,
+        "readingId": "00000000-0000-4000-8000-000000000001",
+        "siteId": "site_001",
+        "sourceId": "src_001_sim_panel",
+        "metric": "voltage.rms",
+        "capturedAt": "2026-07-26T04:15:30.250Z",
+        "sample": {
+          "kind": "numeric",
+          "value": 118.4,
+          "unit": "V"
+        },
+        "origins": ["simulated"],
+        "derivation": "direct"
+      },
+      {
+        "schemaVersion": 1,
+        "readingId": "00000000-0000-4000-8000-000000000002",
+        "siteId": "site_001",
+        "sourceId": "src_001_sim_panel",
+        "metric": "source.active",
+        "capturedAt": "2026-07-26T04:15:30.250Z",
+        "sample": {
+          "kind": "state",
+          "state": "utility",
+          "domain": "energy_source"
+        },
+        "origins": ["simulated"],
+        "derivation": "direct"
+      },
+      {
+        "schemaVersion": 1,
+        "readingId": "00000000-0000-4000-8000-000000000003",
+        "siteId": "site_001",
+        "sourceId": "src_001_sim_battery",
+        "metric": "battery.runtime_remaining",
+        "capturedAt": "2026-07-26T04:15:30.250Z",
+        "sample": {
+          "kind": "numeric",
+          "value": 15120,
+          "unit": "s"
+        },
+        "origins": ["simulated"],
+        "derivation": "estimated",
+        "lineage": {
+          "rule": "runtime_estimate",
+          "ruleVersion": "1.0.0",
+          "inputIds": [
+            "00000000-0000-4000-8000-000000000010",
+            "00000000-0000-4000-8000-000000000011"
+          ]
+        }
+      }
+    ]
+  }
+}

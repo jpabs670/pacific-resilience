@@ -1,0 +1,18 @@
+{
+  "intent": "Range boundaries are inclusive: 0 percent and 100 percent are both in range.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000008",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_battery",
+    "metric": "battery.state_of_charge",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 0,
+      "unit": "percent"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

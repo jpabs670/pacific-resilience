@@ -1,0 +1,24 @@
+{
+  "intent": "A state metric belongs to exactly one domain.",
+  "expect": [
+    {
+      "path": "sample.domain",
+      "code": "state.domain.mismatch"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000002",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "source.active",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "state",
+      "state": "online",
+      "domain": "link_state"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

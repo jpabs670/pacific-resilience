@@ -1,0 +1,23 @@
+{
+  "intent": "A derived record disclosing every contributing origin, deduplicated and in canonical order. No origin is selected as a winner.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000005",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "load.site.active_power",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 900,
+      "unit": "W"
+    },
+    "origins": ["imported", "manual"],
+    "derivation": "inferred",
+    "lineage": {
+      "rule": "site_load_sum",
+      "ruleVersion": "1.0.0",
+      "inputIds": ["00000000-0000-4000-8000-000000000013", "00000000-0000-4000-8000-000000000014"]
+    }
+  }
+}

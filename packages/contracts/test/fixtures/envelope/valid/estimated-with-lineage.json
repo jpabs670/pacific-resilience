@@ -1,0 +1,23 @@
+{
+  "intent": "Runtime estimate over simulated inputs: origins ['simulated'] AND derivation 'estimated' — both facts preserved, with lineage.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000003",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_battery",
+    "metric": "battery.runtime_remaining",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 15120,
+      "unit": "s"
+    },
+    "origins": ["simulated"],
+    "derivation": "estimated",
+    "lineage": {
+      "rule": "runtime_estimate",
+      "ruleVersion": "1.0.0",
+      "inputIds": ["00000000-0000-4000-8000-000000000010", "00000000-0000-4000-8000-000000000011"]
+    }
+  }
+}

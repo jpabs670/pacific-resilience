@@ -1,0 +1,23 @@
+{
+  "intent": "A deterministic rule output: derivation 'inferred' with resolvable lineage.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000004",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "load.site.active_power",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 1840,
+      "unit": "W"
+    },
+    "origins": ["simulated"],
+    "derivation": "inferred",
+    "lineage": {
+      "rule": "site_load_sum",
+      "ruleVersion": "1.0.0",
+      "inputIds": ["00000000-0000-4000-8000-000000000012"]
+    }
+  }
+}

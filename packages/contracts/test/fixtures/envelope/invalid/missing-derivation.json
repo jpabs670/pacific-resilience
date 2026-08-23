@@ -1,0 +1,23 @@
+{
+  "intent": "derivation is required; there is no default derivation. A missing enum field reports value.invalid (\"Invalid option\") where a missing array field reports type.invalid — both name the field, which is what matters.",
+  "expect": [
+    {
+      "path": "derivation",
+      "code": "value.invalid"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000001",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "voltage.rms",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 118.4,
+      "unit": "V"
+    },
+    "origins": ["simulated"]
+  }
+}

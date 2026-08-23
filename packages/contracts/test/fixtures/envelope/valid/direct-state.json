@@ -1,0 +1,18 @@
+{
+  "intent": "A raw simulated state observation. source.active is not a number.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000002",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "source.active",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "state",
+      "state": "utility",
+      "domain": "energy_source"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

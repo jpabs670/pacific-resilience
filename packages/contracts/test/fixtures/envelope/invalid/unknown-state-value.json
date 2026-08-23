@@ -1,0 +1,24 @@
+{
+  "intent": "State vocabularies are closed, so 'unknown' stays distinct from 'none'.",
+  "expect": [
+    {
+      "path": "sample.state",
+      "code": "state.value.unknown"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000002",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "source.active",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "state",
+      "state": "mains",
+      "domain": "energy_source"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

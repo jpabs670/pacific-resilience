@@ -1,0 +1,16 @@
+{
+  "name": "normal-day",
+  "description": "Stable utility service. Voltage and frequency hold near nominal, the refrigerator cycles, and the battery sits full. No events should be derived from this scenario.",
+  "intervalMs": 1000,
+  "initialSocPct": 100,
+  "phases": [
+    {
+      "label": "utility-stable",
+      "durationMs": 600000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@pacific-resilience/gateway",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Offline-first edge gateway: durable SQLite outbox, monotonic sequencing, batch preparation, acknowledgement, and bounded retry. Read-only toward physical equipment.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@pacific-resilience/contracts": "*",
+    "better-sqlite3": "13.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.13"
+  }
+}

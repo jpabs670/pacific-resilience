@@ -1,0 +1,6 @@
+name: pacific-resilience
+
+# Local services will be added only after the architecture and credentials
+# strategy are approved. Keeping this file valid allows the stack to grow
+# deliberately without starting or installing anything now.
+services: {}

@@ -1,0 +1,19 @@
+{
+  "intent": "An out-of-range voltage is ACCEPTED and flagged, never rejected: a surge may be the most important reading in an outage.",
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000006",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "voltage.rms",
+    "capturedAt": "2026-07-26T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 412,
+      "unit": "V"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct",
+    "quality": ["out_of_range"]
+  }
+}

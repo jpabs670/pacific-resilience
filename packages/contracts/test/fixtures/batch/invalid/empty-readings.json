@@ -1,0 +1,17 @@
+{
+  "intent": "A batch must carry at least one reading.",
+  "expect": [
+    {
+      "path": "readings",
+      "code": "batch.readings.empty"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "gatewayId": "gw_001_1",
+    "sequenceStart": 41204,
+    "sequenceEnd": 41203,
+    "clockOffsetMs": 0,
+    "readings": []
+  }
+}

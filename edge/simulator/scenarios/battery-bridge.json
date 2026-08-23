@@ -1,0 +1,32 @@
+{
+  "name": "battery-bridge",
+  "description": "Utility is lost but the battery carries the critical loads, so voltage stays present and the source is 'battery' rather than 'none'. Losing the utility is not the same as an outage at the site, and this scenario exists so that distinction is testable.",
+  "intervalMs": 1000,
+  "initialSocPct": 78,
+  "phases": [
+    {
+      "label": "utility-stable",
+      "durationMs": 60000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 4
+    },
+    {
+      "label": "battery-carrying-critical-loads",
+      "durationMs": 300000,
+      "source": "battery",
+      "voltage": { "mode": "nominal" },
+      "served": "critical",
+      "socRatePctPerHour": -18
+    },
+    {
+      "label": "utility-returned-recharging",
+      "durationMs": 120000,
+      "source": "utility",
+      "voltage": { "mode": "nominal" },
+      "served": "all",
+      "socRatePctPerHour": 12
+    }
+  ]
+}

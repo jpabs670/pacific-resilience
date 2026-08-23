@@ -1,0 +1,24 @@
+{
+  "intent": "A well-shaped string that is not a real calendar instant is rejected.",
+  "expect": [
+    {
+      "path": "capturedAt",
+      "code": "time.invalid_calendar"
+    }
+  ],
+  "value": {
+    "schemaVersion": 1,
+    "readingId": "00000000-0000-4000-8000-000000000001",
+    "siteId": "site_001",
+    "sourceId": "src_001_sim_panel",
+    "metric": "voltage.rms",
+    "capturedAt": "2026-02-30T04:15:30.250Z",
+    "sample": {
+      "kind": "numeric",
+      "value": 118.4,
+      "unit": "V"
+    },
+    "origins": ["simulated"],
+    "derivation": "direct"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@pacific-resilience/simulator",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Deterministic Site 001 telemetry simulator. Emits simulated observations only; it models sensors, never actuators.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@pacific-resilience/contracts": "*",
+    "zod": "4.4.3"
+  }
+}
