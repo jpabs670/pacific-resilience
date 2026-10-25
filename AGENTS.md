@@ -18,7 +18,7 @@ Docs mention a `CLAUDE.md`; it is not in the repo, so this file is the agent rul
 - `edge/gateway/` — SQLite outbox, sequencing, batching, bounded retry, acknowledgement.
 - `apps/` — reserved (api/web later). `infrastructure/` — empty by design.
 - `docs/architecture/` — ADRs (`adr/000N-*.md`) and design notes; `docs/security/`, `docs/product/`, `docs/operations/`.
-- Each workspace keeps tests in its own `test/` with fixtures under `test/fixtures/`.
+- Each workspace keeps tests in its own `test/`. Helpers/fixtures: `packages/contracts/test/fixtures/`; `edge/gateway/test/support/`; `edge/simulator/test/support/` plus scenario JSON in `edge/simulator/scenarios/`.
 
 ## Setup
 `npm ci` with Node 22 on PATH. Node 20 fails the native build of better-sqlite3.
@@ -27,7 +27,7 @@ Docs mention a `CLAUDE.md`; it is not in the repo, so this file is the agent rul
 - `npm run check`: Biome lint plus the secret scan. Both pass (156 files, 15 rules).
 - `npm test`: Vitest in every workspace. 383 tests pass (contracts 224, gateway 109, simulator 50).
 - `npm run typecheck`: `tsc` in every workspace. Passes.
-- `npm run format`: `biome check --write .` (only on files you changed).
+- `npm run format`: `biome check --write .` — rewrites the WHOLE repo. To touch only your files, run `npx biome check --write <changed-files>` instead.
 - One workspace: `npm test -w @pacific-resilience/gateway` (or `contracts`, `simulator`).
 
 ## Code style
